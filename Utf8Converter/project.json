@@ -4,7 +4,8 @@
   "description": "Converts text files to UTF-8 without BOM",
   "version": "1.0.1621-0",
   "buildOptions": {
-    "emitEntryPoint": true
+    "emitEntryPoint": true,
+    "defines": [ "PLATFORM" ]
   },
 
   "dependencies": {

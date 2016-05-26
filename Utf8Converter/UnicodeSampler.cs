@@ -7,11 +7,13 @@ namespace Utf8Converter
 	{
 		static UnicodeSampler()
 		{
+#if PLATFORM
 			//	Configure Code Pages provider, so that we can resolve code page
 			//	1252 using System.Text.Encoding.GetEncoding (1252).
 
 			var provider = System.Text.CodePagesEncodingProvider.Instance;
 			System.Text.Encoding.RegisterProvider (provider);
+#endif
 		}
 
 		public static bool IsValidUTF8(byte[] data)
