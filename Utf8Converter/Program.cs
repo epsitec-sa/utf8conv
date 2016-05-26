@@ -11,8 +11,8 @@ namespace Utf8Converter
 	{
 		public static void Main(string[] args)
 		{
-			string filter = args.Length > 1 ? args[1] : "*.cs";
-			string root   = args.Length > 2 ? args[2] : ".";
+			string filter = args.Length > 0 ? args[0] : "*.cs";
+			string root   = args.Length > 1 ? args[1] : ".";
 
 			foreach (var path in System.IO.Directory.GetFiles (root, filter, System.IO.SearchOption.AllDirectories))
 			{
